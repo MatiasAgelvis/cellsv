@@ -1,14 +1,14 @@
-name: CI
+name: Deploy
 on: push
 jobs:
   deploy:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
 
       - name: Update theme
-        # (Optional)If you have the theme added as submodule, you can pull it and use the most updated version
+        # pull and use the most updated versions
         run: git submodule update --init --recursive
 
       - name: Setup hugo
@@ -17,8 +17,6 @@ jobs:
           hugo-version: lastest
 
       - name: Build
-        # remove --minify tag if you do not need it
-        # docs: https://gohugo.io/hugo-pipes/minification/
         run: hugo --minify
 
       - name: Deploy
