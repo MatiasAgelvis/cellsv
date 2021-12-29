@@ -1,0 +1,42 @@
+:root {
+    --hopper: #f1f0ef;
+}
+
+.dark {
+    --hopper: #41443b;
+}
+
+.buttono {
+    color: var(--primary);
+    background: var(--tertiary);
+    padding: 1em;
+    border-radius: 0.5em;
+    /*transition: all 0.2s;*/
+}
+
+button:disabled,
+button[disabled] {
+    box-shadow: 0 0 1pt 2pt var(--primary);
+    background-color: transparent;
+    color: var(--tertiary);
+    cursor: wait;
+}
+
+/*
+#spinner {
+        display: none;
+        padding-inline-start: 0.5em;
+}
+*/
+
+.filepond--panel-root {
+    background-color: var(--hopper);
+}
+
+.filepond--credits {
+    color: var(--secondary);
+}
+
+.filepond--drop-label {
+    color: var(--primary);
+}
