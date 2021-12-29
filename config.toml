@@ -1,0 +1,8 @@
+baseURL = 'http://matiasagelvis.com/'
+languageCode = 'en-us'
+title = 'CellSV'
+theme = "PaperMod"
+
+[markup.goldmark.renderer]
+  # Allow HTML in md files
+  unsafe = true
