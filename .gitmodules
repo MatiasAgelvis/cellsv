@@ -4,12 +4,12 @@
 [submodule "themes/paper"]
 	path = themes/paper
 	url = https://github.com/nanxiaobei/hugo-paper
-[submodule "beautifulhugo"]
-	path = themes/beautifulhugo
-	url = https://github.com/halogenica/beautifulhugo.git
+# [submodule "beautifulhugo"]
+# 	path = themes/beautifulhugo
+# 	url = https://github.com/halogenica/beautifulhugo.git
 [submodule "themes/PaperMod"]
 	path = themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
-[submodule "themes/hugo-fresh"]
-	path = themes/hugo-fresh
-	url = https://github.com/StefMa/hugo-fresh
+# [submodule "themes/hugo-fresh"]
+# 	path = themes/hugo-fresh
+# 	url = https://github.com/StefMa/hugo-fresh
