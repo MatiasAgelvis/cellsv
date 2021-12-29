@@ -1,4 +1,4 @@
-baseURL = 'http://matiasagelvis.com/'
+baseURL = 'http://matiasagelvis.com/cellsv'
 languageCode = 'en-us'
 title = 'CellSV'
 theme = "PaperMod"
