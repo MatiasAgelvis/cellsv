@@ -33,3 +33,12 @@ Currently there is an arbitrary limit to the files size of 20MB and a limit in t
 If you want to contribute to the website you can do it here [CellSV](https://github.com/MatiasAgelvis/cellsv).
 
 If you experience any issue please report it on [Github](https://github.com/MatiasAgelvis/cellsv/issues) or [send a message](https://matiasagelvis.com/contact), we can improve the page together!
+
+## Acknowledgments
+
+This website works thanks to the following packages:
+- [Hugo](https://gohugo.io)
+- [PaperMod Theme](https://adityatelange.github.io/hugo-PaperMod/)
+- [x2js](https://github.com/abdolence/x2js)
+- [Filepond](https://pqina.nl/filepond/)
+- [vkBeautify](https://github.com/vkiryukhin/vkBeautify)
