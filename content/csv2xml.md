@@ -14,6 +14,7 @@ menu:
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link href="../style.css" rel="stylesheet" />
+<link href="../accordion.css" rel="stylesheet" />
 
 <input type="file" 
        class="filepond"
@@ -21,6 +22,23 @@ menu:
        multiple
        data-max-file-size="20MB"
        data-max-files="25" />
+
+</br>
+
+<div class="tabs">
+  <div class="tab">
+    <input class='accordion' type="checkbox" id="chck1">
+    <label class="tab-label" for="chck1">Advanced Options</label>
+    <div class="tab-content">
+      <form>
+          <label for="extension">Extension Name:</label>
+            <input class='option-input' type="text" value="xml" id="extension" name="extension" maxlength="8" size="10">
+      </form>
+    </div>
+  </div>
+</div>
+
+</br>
 
 <button class='buttono' onclick="convert()" id="convertBtn">Convert
     <!-- <div id="spinner" class="fa"><i class="fas fa-spinner fa-spin"></i></div> -->
@@ -35,14 +53,16 @@ menu:
         // create the file reader
         let reader = new FileReader()
         // prepare the download name
-        let downloadName = replaceExtension(upload.name, 'xml')
+        let extension = document.getElementById("extension").value
+        let downloadName = replaceExtension(upload.name, extension)
 
         reader.readAsText(upload)
 
         reader.addEventListener("load", () => {
+            let header = '<?xml version="1.0"?>\n'
             let result = convert2xml(reader.result)
             if (result != null) {
-                saveData(str2blob(result), downloadName)
+                saveData(str2blob(header + result), downloadName)
             }
         }, false)
     }
