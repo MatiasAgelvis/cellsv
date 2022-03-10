@@ -3,7 +3,7 @@
 }
 
 .dark {
-    --hopper: #41443b;
+    --hopper: var(--entry);
 }
 
 .buttono {
