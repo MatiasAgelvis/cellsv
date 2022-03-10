@@ -41,8 +41,8 @@ menu:
 </br>
 
 <button class='buttono' onclick="convert()" id="convertBtn">Convert
-    <!-- <div id="spinner" class="fa"><i class="fas fa-spinner fa-spin"></i></div> -->
 </button>
+<!-- <div id="spinner" class="fa"><i class="fas fa-spinner fa-spin"></i></div> -->
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 <script src="../script.js"></script>
@@ -71,9 +71,9 @@ menu:
         
         // convert to json
         // replace the quotations with numerals, and put the value in a cell
-        csv = csv.replace(/#;(.*?);#/g, '"$1"');
+        csv = csv.replace(/#\t(.*?)\t#/g, '"$1"');
         // replace the indentation with a cell
-        let json = csv.replace(/;/g, "    ");
+        let json = csv.replace(/\t/g, "    ");
 
         json = JSON.parse(json)
 

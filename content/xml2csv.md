@@ -23,8 +23,8 @@ menu:
        data-max-files="25" />
 
 <button class='buttono' onclick="convert()" id="convertBtn">Convert
-    <!-- <div id="spinner" class="fa"><i class="fas fa-spinner fa-spin"></i></div> -->
 </button>
+<!-- <div id="spinner" class="fa"><i class="fas fa-spinner fa-spin"></i></div> -->
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 <script src="../script.js"></script>
@@ -34,7 +34,7 @@ menu:
         // create the file reader
         let reader = new FileReader()
         // prepare the download name
-        let downloadName = replaceExtension(upload.name, 'csv')
+        let downloadName = replaceExtension(upload.name, 'tsv')
 
         reader.readAsText(upload)
 
@@ -63,9 +63,9 @@ menu:
 
         // convert to csv
         // replace the indentation with a cell
-        X = X.replace(/[ ]{4}/g, ";");
+        X = X.replace(/[ ]{4}/g, "\t");
         // replace the quotations with numerals, and put the value in a cell
-        X = X.replace(/\"(.*?)\"/g, "#;$1;#");
+        X = X.replace(/\"(.*?)\"/g, "#\t$1\t#");
 
         return X
     }
