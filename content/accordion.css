@@ -48,8 +48,7 @@
 .tab-content {
   max-height: 0;
   padding: 0 1em;
-  color: var(--entry);
-  background: var(--primary);
+  background: var(--entry);
   transition: all 0.35s;
 }
 .tab-close {
@@ -77,7 +76,8 @@ input:checked ~ .tab-content {
 
 .option-input{
   border-radius: var(--radius);
-  border: 1px solid var(--code-bg);
+  border: 1px solid var(--border);
   padding: 0 0.3em;
   font-weight: bold;
+  color: var(--content);
 }
